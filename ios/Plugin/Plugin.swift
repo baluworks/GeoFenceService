@@ -8,8 +8,8 @@ import Capacitor
 @objc(GeoFenceServicee)
 public class GeoFenceServicee: CAPPlugin {
     
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
+    @objc func init(_ call: CAPPluginCall) {
+        let value = call.getString("message") ?? ""
         call.success([
             "value": value
         ])
