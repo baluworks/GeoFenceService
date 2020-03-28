@@ -9,7 +9,7 @@ import Capacitor
 public class GeoFenceServicee: CAPPlugin {
     
     @objc func init(_ call: CAPPluginCall) {
-        let value = call.getString("message") ?? ""
+        let value = call.getString("value") ?? ""
         call.success([
             "value": value
         ])

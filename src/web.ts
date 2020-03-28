@@ -1,7 +1,8 @@
 import { WebPlugin } from '@capacitor/core';
 import { GeoFenceServiceePlugin } from './definitions';
 
-export class GeoFenceServiceeWeb extends WebPlugin implements GeoFenceServiceePlugin {
+export class GeoFenceServiceeWeb extends WebPlugin
+  implements GeoFenceServiceePlugin {
   constructor() {
     super({
       name: 'GeoFenceServicee',
@@ -9,7 +10,7 @@ export class GeoFenceServiceeWeb extends WebPlugin implements GeoFenceServiceePl
     });
   }
 
-  async echo(options: { value: string }): Promise<{value: string}> {
+  async init(options: { value: string }): Promise<{ value: string }> {
     console.log('ECHO', options);
     return options;
   }

@@ -1,9 +1,9 @@
-declare module "@capacitor/core" {
+declare module '@capacitor/core' {
   interface PluginRegistry {
     GeoFenceServicee: GeoFenceServiceePlugin;
   }
 }
 
 export interface GeoFenceServiceePlugin {
-  echo(options: { value: string }): Promise<{value: string}>;
+  init(options: { value: string }): Promise<{ value: string }>;
 }
