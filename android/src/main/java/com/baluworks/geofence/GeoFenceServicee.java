@@ -7,7 +7,7 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 
 @NativePlugin()
-public class GeoFenceServicee extends Plugin {
+public class GeoFenceService extends Plugin {
 
     @PluginMethod()
     public void echo(PluginCall call) {

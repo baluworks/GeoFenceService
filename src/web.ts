@@ -1,24 +1,27 @@
 import { WebPlugin } from '@capacitor/core';
-import { GeoFenceServiceePlugin } from './definitions';
+import { GeoFenceServicePlugin } from './definitions';
 
-export class GeoFenceServiceeWeb extends WebPlugin
-  implements GeoFenceServiceePlugin {
+export class GeoFenceServiceWeb extends WebPlugin
+  implements GeoFenceServicePlugin {
   constructor() {
     super({
-      name: 'GeoFenceServicee',
+      name: 'GeoFenceService',
       platforms: ['web']
     });
   }
 
-  async init(options: { value: string }): Promise<{ value: string }> {
+  async initialise(options: { value: string }): Promise<{ value: string }> {
     console.log('ECHO', options);
+    return options;
+  }
+  async getNotify(options: { value: string }): Promise<{ value: string }> {
     return options;
   }
 }
 
-const GeoFenceServicee = new GeoFenceServiceeWeb();
+const GeoFenceService = new GeoFenceServiceWeb();
 
-export { GeoFenceServicee };
+export { GeoFenceService };
 
 import { registerWebPlugin } from '@capacitor/core';
-registerWebPlugin(GeoFenceServicee);
+registerWebPlugin(GeoFenceService);
